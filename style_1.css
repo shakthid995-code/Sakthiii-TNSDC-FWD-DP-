@@ -1,0 +1,441 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Student Portfolio — Your Name</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root{
+
+      --bg: #0f1724;
+
+      --card: #0b1220;
+
+      --muted: #9aa4b2;
+
+      --accent: #6ee7b7;
+
+      --accent-2: #7dd3fc;
+
+      --glass: rgba(255,255,255,0.03);
+
+      --white: #e6eef6;
+
+      --radius: 14px;
+
+      --max-width: 1000px;
+
+    }
+
+    *{box-sizing:border-box}
+
+    html,body{height:100%}
+
+    body{
+
+      margin:0;
+
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
+      background: linear-gradient(180deg,var(--bg), #061020 140%);
+
+      color:var(--white);
+
+      -webkit-font-smoothing:antialiased;
+
+      -moz-osx-font-smoothing:grayscale;
+
+      padding:40px 20px;
+
+      display:flex;
+
+      justify-content:center;
+
+      align-items:flex-start;
+
+      gap:20px;
+
+    }/* container */
+
+.container{
+
+  width:100%;
+
+  max-width:var(--max-width);
+
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+
+  border-radius:18px;
+
+  padding:28px;
+
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+
+  backdrop-filter: blur(6px);
+
+}
+
+header{
+
+  display:flex;
+
+  gap:20px;
+
+  align-items:center;
+
+  margin-bottom:18px;
+
+}
+
+.avatar{
+
+  width:96px;height:96px;border-radius:16px;flex:0 0 96px;overflow:hidden;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#05303a;font-size:28px;
+
+}
+
+.name-block{flex:1}
+
+h1{margin:0;font-size:22px}
+
+.sub{color:var(--muted);margin-top:4px;font-size:14px}
+
+.grid{
+
+  display:grid;
+
+  grid-template-columns: 1fr 360px;
+
+  gap:20px;
+
+}
+
+@media (max-width:880px){
+
+  .grid{grid-template-columns:1fr}
+
+  .avatar{width:82px;height:82px}
+
+}
+
+/* main card styles */
+
+.card{background:var(--card);padding:18px;border-radius:12px}
+
+.section{margin-bottom:14px}
+
+.section h2{margin:0 0 8px 0;font-size:16px}
+
+p{margin:0;color:var(--muted);line-height:1.5}
+
+/* about */
+
+.about{display:flex;gap:18px;align-items:flex-start}
+
+.about .bio{flex:1}
+
+/* two-column lists */
+
+.two-col{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+
+/* education & experience */
+
+.item{background:var(--glass);padding:12px;border-radius:10px}
+
+.item .meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+
+.item strong{display:block}
+
+.meta small{color:var(--muted)}
+
+/* projects */
+
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+
+.project{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+
+.project h3{margin:0 0 6px 0;font-size:15px}
+
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+
+.tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted)}
+
+/* skills */
+
+.skill{display:flex;flex-direction:column;gap:8px}
+
+.skill .label{display:flex;justify-content:space-between}
+
+.bar{height:10px;background:rgba(255,255,255,0.04);border-radius:999px;overflow:hidden}
+
+.bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:999px}
+
+/* sidebar */
+
+aside .card{padding:16px}
+
+.contact-list{display:flex;flex-direction:column;gap:8px}
+
+.contact-list a{color:var(--white);text-decoration:none}
+
+footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+/* print friendly */
+
+@media print{
+
+  body{background:#fff;color:#000;padding:0}
+
+  .container{box-shadow:none;border-radius:0}
+
+  .avatar{border-radius:0}
+
+  .card{background:transparent;padding:0}
+
+  .grid{grid-template-columns:1fr 320px}
+
+}
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container" role="document">
+
+    <header>
+
+      <div class="avatar" aria-hidden="true">SD</div>
+
+      <div class="name-block">
+
+        <h1>Your Name — Student / Aspiring Developer</h1>
+
+        <div class="sub">Computer Science • Class of 2027 • College Name • City, Country</div>
+
+      </div>
+
+      <div style="text-align:right">
+
+        <div style="font-size:12px;color:var(--muted)">GPA: <strong style="color:var(--white)">8.6 / 10</strong></div>
+
+      </div>
+
+    </header><div class="grid">
+
+  <!-- main column -->
+
+  <main>
+
+    <section class="card section about" aria-labelledby="about">
+
+      <div class="bio">
+
+        <h2 id="about">About me</h2>
+
+        <p>
+
+          I am a motivated undergraduate student interested in software development, data structures, and web technologies. I enjoy building small projects, learning new languages, and contributing to open source.
+
+        </p>
+
+      </div>
+
+    </section>
+
+    <section class="card section" aria-labelledby="education">
+
+      <h2 id="education">Education</h2>
+
+      <div class="two-col">
+
+        <div class="item">
+
+          <div class="meta"><strong>B.Sc. Computer Science</strong><small>2024 – Present</small></div>
+
+          <div class="meta"><small>College Name</small><small>GPA: 8.6</small></div>
+
+        </div>
+
+        <div class="item">
+
+          <div class="meta"><strong>High School (Science)</strong><small>2019 – 2024</small></div>
+
+          <div class="meta"><small>School Name</small><small>Percentage: 92%</small></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="card section" aria-labelledby="projects">
+
+      <h2 id="projects">Projects</h2>
+
+      <div class="projects">
+
+        <article class="project">
+
+          <h3>Personal Website</h3>
+
+          <p class="muted">A responsive portfolio website built with HTML, CSS, and vanilla JavaScript. Includes a blog section and a lightweight CMS integration.</p>
+
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+
+        </article>
+
+        <article class="project">
+
+          <h3>Library Management System</h3>
+
+          <p class="muted">A small CRUD app using Python Flask and SQLite for managing books, members, and loans.</p>
+
+          <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQLite</span></div>
+
+        </article>
+
+        <article class="project">
+
+          <h3>Data Visualizer</h3>
+
+          <p class="muted">An interactive dashboard to plot CSV datasets and export charts.</p>
+
+          <div class="tags"><span class="tag">D3</span><span class="tag">JS</span></div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section class="card section" aria-labelledby="experience">
+
+      <h2 id="experience">Experience & Internships</h2>
+
+      <div class="item" style="margin-bottom:8px">
+
+        <div class="meta"><strong>Frontend Intern — XYZ Startup</strong><small>Jun 2024 – Aug 2024</small></div>
+
+        <p class="muted">Worked on responsive UI components, improved page performance, and added accessibility features.</p>
+
+      </div>
+
+      <div class="item">
+
+        <div class="meta"><strong>Research Assistant — College Lab</strong><small>Sep 2023 – Dec 2023</small></div>
+
+        <p class="muted">Assisted with data collection and preprocessing for a small ML project on document classification.</p>
+
+      </div>
+
+    </section>
+
+    <section class="card section" aria-labelledby="awards">
+
+      <h2 id="awards">Awards & Certifications</h2>
+
+      <div class="two-col">
+
+        <div class="item"><strong>Hackathon Winner</strong><div style="margin-top:6px;color:var(--muted)">Local Hack 2024</div></div>
+
+        <div class="item"><strong>Certificate: Web Development</strong><div style="margin-top:6px;color:var(--muted)">Coursera</div></div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- sidebar -->
+
+  <aside>
+
+    <div class="card">
+
+      <h2>Contact</h2>
+
+      <div class="contact-list">
+
+        <div><strong>Email:</strong> <a href="mailto:youremail@example.com">youremail@example.com</a></div>
+
+        <div><strong>Phone:</strong> <a href="tel:+911234567890">+91 12345 67890</a></div>
+
+        <div><strong>Location:</strong> City, Country</div>
+
+        <div><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/yourhandle</a></div>
+
+        <div><strong>GitHub:</strong> <a href="#">github.com/yourhandle</a></div>
+
+      </div>
+
+    </div>
+
+    <div class="card" style="margin-top:12px">
+
+      <h2>Skills</h2>
+
+      <div class="skill">
+
+        <div class="label"><span>HTML & CSS</span><span>90%</span></div>
+
+        <div class="bar"><i style="width:90%"></i></div>
+
+        <div class="label"><span>JavaScript</span><span>72%</span></div>
+
+        <div class="bar"><i style="width:72%"></i></div>
+
+        <div class="label"><span>Python</span><span>70%</span></div>
+
+        <div class="bar"><i style="width:70%"></i></div>
+
+        <div class="label"><span>Data Structures</span><span>78%</span></div>
+
+        <div class="bar"><i style="width:78%"></i></div>
+
+      </div>
+
+    </div>
+
+    <div class="card" style="margin-top:12px">
+
+      <h2>Quick Links</h2>
+
+      <ul style="margin:8px 0 0 16px;color:var(--muted)">
+
+        <li><a href="#projects">Projects</a></li>
+
+        <li><a href="#education">Education</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+
+      </ul>
+
+    </div>
+
+  </aside>
+
+</div>
+
+<footer>
+
+  Built with ♥ • Update this file to personalize. Printable and responsive.
+
+</footer>
+
+  </div>
+
+</body>
+
+</html>
